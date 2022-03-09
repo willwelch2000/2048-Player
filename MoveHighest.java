@@ -14,7 +14,7 @@ class MoveHighest extends Move {
         for (int i = 0; i < secondaryGoals.size(); i++)
             if (secondaryGoals.get(i).getForget() && !secondaryGoals.get(i).tryingToFix)
                 toRemove.add(secondaryGoals.get(i));
-        secondaryGoals.remove(toRemove);
+        secondaryGoals.removeAll(toRemove);
 
         // If number doesn't exist (or if number isn't the highest number), change number and clear secondary goals
         boolean numberExists = false;
