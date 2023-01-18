@@ -21,7 +21,7 @@ public class Strategy2048 {
             }
 
             System.out.println(game);
-            System.out.println(goal);
+            //System.out.println(goal);
             Thread.sleep(500);
         }
         System.out.println(game.highestNumber());
