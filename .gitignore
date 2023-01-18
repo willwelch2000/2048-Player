@@ -1,2 +1,2 @@
 # Ignore generated class files
-.class
+*.class
