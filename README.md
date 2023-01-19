@@ -3,7 +3,7 @@
 This project contains all of the files for a system that plays the simple game "2048."
 
 ## Installation
-From a command line, with java installed:
+From a command line, with Java installed:
 ```bash
 javac Strategy2048.java
 ```
