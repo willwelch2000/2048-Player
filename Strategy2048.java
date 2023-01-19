@@ -6,7 +6,7 @@ public class Strategy2048 {
 
     public static void main(String[] args) throws InterruptedException {
         System.out.println(game);
-        System.out.println(goal);
+        // System.out.println(goal);
         Thread.sleep(1000);
         Scanner in = new Scanner(System.in);
         while (!game.over()) {
