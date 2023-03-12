@@ -321,7 +321,7 @@ class Get extends Goal {
         for (int i = 0; i < possibleNextSpaces.length; i++) {
             int[] testNextSpace = possibleNextSpaces[i];
             if (board[testNextSpace[0]][testNextSpace[1]] == currentValue && Strategy2048.combinable(board, desiredLocation, testNextSpace, keepLocations)) {
-                System.out.println("equal, combinable");
+                // System.out.println("equal, combinable");
                 return testNextSpace;
             }
         }
@@ -331,7 +331,7 @@ class Get extends Goal {
             int[] testNextSpace = possibleNextSpaces[i];
             int nextValue = board[testNextSpace[0]][testNextSpace[1]];
             if (nextValue > currentValue/4 && nextValue <= currentValue && Strategy2048.numberOfSmallerSurroundingSpaces(board, testNextSpace, new ArrayList<int[]>()) > 2 && Strategy2048.lockedInPlaceVertically(board, testNextSpace)) {
-                System.out.println("high, not crowded, locked in");
+                // System.out.println("high, not crowded, locked in");
                 return testNextSpace;
             }
         }
@@ -341,14 +341,14 @@ class Get extends Goal {
             int[] testNextSpace = possibleNextSpaces[i];
             int nextValue = board[testNextSpace[0]][testNextSpace[1]];
             if (nextValue <= currentValue && Strategy2048.numberOfSmallerSurroundingSpaces(board, testNextSpace, new ArrayList<int[]>()) > 2 && Strategy2048.lockedInPlaceVertically(board, testNextSpace)) {
-                System.out.println("not crowded, locked in");
+                // System.out.println("not crowded, locked in");
                 return testNextSpace;
             }
         }
 
         //If there's one that isn't too high, return that
         if (largestOptions.size() > 0) {
-            System.out.println("not too high");
+            // System.out.println("not too high");
             return largestOptions.get(0);
         }
         
